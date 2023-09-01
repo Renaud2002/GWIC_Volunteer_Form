@@ -33,7 +33,10 @@ roles = {
 
 request = input("What do you need help with? \n")
 
-if request in roles.keys():
-	print(roles.get(request))
-else:
-	print('Sorry, we can\'help with that.')
+def lookup_role(r):
+	if r in roles.keys():
+		print(roles.get(r))
+	else:
+		print('Sorry, we can\'help with that.')
+
+lookup_role(request)
